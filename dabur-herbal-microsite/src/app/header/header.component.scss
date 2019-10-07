@@ -1,0 +1,33 @@
+@import "../../assets/variables.scss";
+.header{
+    height: 8vh;
+    display: flex;
+    align-items: center;
+    background: $darkblue2;
+    .menu{
+        display: flex;
+        a{
+            display: flex;
+            justify-content: center;
+            text-decoration: none;
+            cursor: pointer;
+            color: white;
+        }
+    }
+    .logo_container{
+        display: flex;
+        height: 100%;
+        .logo{
+            height: 100%;
+            img{
+                height: 100%;
+            }
+        }
+    }
+    .lang{
+        width: 60%;
+        img{
+            width: 40%;
+        }
+    }
+}

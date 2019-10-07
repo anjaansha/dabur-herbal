@@ -1,0 +1,63 @@
+@import "../../assets/variables.scss";
+.quiz_container{
+    height: 92vh;
+    width: 100%;
+    background: url("../../assets/images/quiz.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+.quiz_box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    
+    color: white;
+    background: $darkblue2;
+    .msg{
+        margin-bottom: 20px;
+    }
+}
+.title{
+    display: flex;
+    flex-direction: column;
+    height: 20vh;
+    justify-content: center;
+}
+.option{
+    min-width: 150px;
+    height: 40px;
+    color: white;
+    max-width: auto;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $orange;
+}
+.blockView{
+    display: flex;
+}
+.noneView{
+    display: none;
+}
+.info{
+    font-size: 35px;
+}
+.big{
+    font-size: 50px;
+    color: $orange;
+}
+button{
+    width: 120px;
+    color: white;
+    background: $orange;
+    border: none;
+    height: 33px;
+}
+.main_heading{
+    font-size: 30px;
+}

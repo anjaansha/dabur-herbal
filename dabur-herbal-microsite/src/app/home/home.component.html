@@ -1,0 +1,172 @@
+<div class="home_container">
+  <!-- --------------------------------------header--------------------------------------------- -->
+  <!-- <div class="header row">
+    <div class="col-4 logo_container">
+      <div class="col-2"></div>
+      <div class="logo col-2"><img src="" alt="logo"></div>
+    </div>
+    <div class="col-8 menu">
+      <div class="col-1"></div>
+      <div class="col-2">Language</div>
+      <div class="col-2">Contest Gallery</div>
+      <div class="col-2">Winners</div>
+      <div class="col-2">Quiz</div>
+      <div class="col-2">T&C's</div>
+    </div>
+  </div> -->
+  <!----------------------------------------header----------------------------------------------->
+  <!----------------------------------Timer & images--------------------------------------------->
+  <div class="row images_container">
+    <div class="watercolor"><img src="assets/images/blueImage.png" alt=""></div>
+    <div class="col-4 image">
+      <div class="col-1"></div>
+      <div class="moon col-3"><img src="assets/images/moon.png" alt=""></div>
+      <div class="titles col-7"><img src="assets/images/spacecalling.png" alt=""></div>
+    </div>
+    <div class="col-4 image">
+      <div class="jupiter"><img src="assets/images/jupiter.png" alt=""></div>
+      <div class="astronaut"><img src="assets/images/astronaut.png" alt=""></div>
+    </div>
+    <div class="col-4 image_timer">
+      <div class="countdown_container">
+        <div class="tagline">The first Emirati steps into space in</div>
+        <countdown units="Days | Hours | Minutes"  end="November 14, 2019"></countdown>
+        <div class="top_left"><img src="assets/images/tl.png" alt=""></div>
+        <div class="top_right"><img src="assets/images/tr.png" alt=""></div>
+        <div class="bottom_left"><img src="assets/images/bl.png" alt=""></div>
+        <div class="bottom_right"><img src="assets/images/br.png" alt=""></div>
+      </div>
+      <div class="timer_bottom_images">
+        <div class="astro"><img src="assets/images/astro.png" alt=""></div>
+        <div class="earth"><img src="assets/images/earth.png" alt=""></div>
+      </div>
+    </div>
+
+    
+    <div class="absolute_image"><img src="assets/images/product.png" alt="absolute"></div>
+  </div>
+  <div class="row form_container">
+    <!-- <div class="col-1 blank"></div> -->
+    <div class="upload col-3">
+      <div class="image col-6"><img src="assets/images/uploadsign.png" alt=""></div>
+      <div class="text_upload col-4">
+        <div class="text">Make your ASTRO ID</div>
+        <button (click)="upload()">Upload</button>
+      </div>
+    </div>
+    <div class="upload audio col-3">
+      <div class="image col-3"><img src="assets/images/audio.png" alt=""></div>
+      <div class="text_upload col-9">
+        <div class="text">What would your first message in space be and to whom?</div>
+        <button (click)="record()">Record</button>
+      </div>
+    </div>
+    <div class="form_data col-4">
+      <div class="field_container col-12">
+        <label for="" class="col-4">Name</label>
+        <div class="col-8"><input type="text" [(ngModel)]="name"></div>
+      </div>
+      <div class="field_container col-12">
+        <label for="" class="col-4">Email</label>
+        <div class="col-8"><input type="email" [(ngModel)]="email"></div>
+      </div>
+      <div class="field_container col-12">
+        <label for="" class="col-4">Phone</label>
+        <div class="col-8"><input type="number" [(ngModel)]="contact"></div>
+      </div>
+      <div class="check_container col-12">
+        <div class="col-4"></div>
+        
+        <div class="col-8 terms"> <input #checker type="checkbox" (click)="termsCheck(checker)"><div> &nbsp;  I have read and agree to terms and conditions</div> </div>
+      </div>
+    </div>
+    <div class="button_container_outer col-1">
+      <button (click)="collectId()">SUBMIT</button>
+    </div>
+  </div>
+  <div class="row video">
+    <div class="inner_container col-6">
+      <div class="heading_container">
+          Strong Teeth. Strong Ambition.
+      </div>
+      <div class="text ">
+          Whether it is your ambition or your teeth, both should be strong.
+          Dabur Herb’l Toothpaste makes gums tighter and fights gums and
+          teeth infections, cavities, and tooth decay, making them stronger.
+      </div>
+    </div>
+    <div class="inner_container1 col-6">
+      <div class="video1">
+        <img src="assets/images/video.png" alt="">
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <div class="pop_up_upload" [ngClass]="darkShadow" (click)="close()">
+    
+  </div>
+    <!-- -------------------------------------Image Upload-------------------------------------------- -->
+
+  <div class="image_browse" [ngClass]="imageModal">
+    <div class="image_container">
+      <div class="image_setter">
+        <div class="image"><img src="{{base64}}" alt=""></div>
+      </div>
+      
+      <div class="button_container">
+        <div class="browse"><input #imageInput name="avatar" type="file" accept="image/*" (change)="processFile(imageInput)">CAPTURE</div>
+      </div>
+    </div>
+  </div>
+    <!-- -------------------------------------Image Upload-------------------------------------------- -->
+
+  <div class="audio_browse" [ngClass]="audioModal"><button>Hold to record</button></div>
+
+  <!-- -------------------------------------collectID-------------------------------------------- -->
+  <div class="collectId" [ngClass]="collectIdModal">
+    <div class="thankyou_msg1"><span>Thank you &nbsp;</span> for your submission</div>
+    <div class="card1">
+      <div class="card_heading">
+        <div class="logo"><img src="" alt="logo1"></div>
+        <div class="logo"><img src="" alt="logo2"></div>
+      </div>
+      <div class="image_detail">
+        <div class="image">
+          <img src="assets/images/cardimage.png" alt="">
+          <div class="main_image">
+            <div>
+                <img src="{{base64}}" alt="">
+            </div>
+            
+          </div>
+        </div>
+        <div class="details">
+          <div class="detail">
+            <div class="label">NAME</div>
+            <div>{{name}}</div>
+          </div>
+          <div class="detail">
+            <div class="label">Rank</div>
+            <div>Cadet</div>
+          </div>
+          <div class="detail">
+            <div class="label">Issued</div>
+            <div>{{today | date}}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="buttons_container">
+      <button class="collect_button">Collect your ID card</button>
+      <div class="two_buttons">
+        <button class="transparent_button">Print</button>
+        <button class="transparent_button">Save</button>
+      </div>
+    </div>
+  </div>
+    <!-- -------------------------------------collectID-------------------------------------------- -->
+<div class="msgModal" [ngClass]="msgModal1">
+  <div>{{msg}}</div>
+</div>

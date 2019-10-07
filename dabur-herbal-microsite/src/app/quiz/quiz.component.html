@@ -1,0 +1,32 @@
+<div class="quiz_container">
+  <div class="title">
+    <div class="row">
+      <div class="col-2"></div>
+      <div class="quiz main_heading col-10">Quiz</div>
+    </div>
+    <div class="row">
+      <div class="col-2"></div>
+      <div class="quiz col-8">Challenge what you think you know with our fun quiz. Are you ready space lovers?</div>
+      <div class="col-2"></div>
+    </div>
+  </div>
+  
+  <div class="row" [ngClass]="startView">
+    <div class="col-2"></div>
+    <div class="col-8 quiz_box">
+      <div class="info msg">If You Get <span class="big">8 / 1 0</span> On This Quiz</div>
+      <div class="msg">You should definitely be an astronaut</div>
+      <button class="msg" (click)="begin()">START</button>
+    </div>
+    <div class="col-2"></div>
+  </div>
+  <div class="row" [ngClass]="quizView">
+    <div class="col-2"></div>
+    <div class="col-8 quiz_box">
+      <div class="question msg">{{question}}</div>
+      <div class="option" *ngFor = "let option of options" (click) = "quizbegin(option.option_id)">{{option.option}}</div>
+      
+    </div>
+    <div class="col-2"></div>
+  </div>
+</div>
